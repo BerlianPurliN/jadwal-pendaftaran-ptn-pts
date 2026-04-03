@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadwal Pendaftaran PTN & PTS 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <style>
+      /* Dark mode enhancements */
+      @media (prefers-color-scheme: dark) {
+        html.dark {
+          color-scheme: dark;
+        }
+      }
+    </style>
+    <script>
+      // Initialize theme
+      function initTheme() {
+        const isDark =
+          localStorage.getItem("theme") === "dark" ||
+          (!localStorage.getItem("theme") &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+        if (isDark) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+
+      // Toggle theme
+      function toggleTheme() {
+        const isDark = document.documentElement.classList.contains("dark");
+
+        if (isDark) {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // Initialize on load
+      initTheme();
+    </script>
+  </head>
+  <body class="bg-white dark:bg-gray-900 transition-colors duration-200">
+    <header class="border-b border-gray-200 dark:border-gray-700">
+      <div class="py-6 px-4 max-w-6xl mx-auto">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+              Jadwal Pendaftaran PTN & PTS 2026
+            </h1>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Ringkasan jadwal seleksi masuk perguruan tinggi negeri (PTN) dan
+              swasta (PTS) di Indonesia untuk tahun 2026, termasuk SNPMB, SNBT,
+              dan jalur mandiri per kampus.
+            </p>
+          </div>
+          <button
+            onclick="toggleTheme()"
+            class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            aria-label="Toggle theme"
+          >
+            <span class="block dark:hidden">
+              <!-- Sun icon -->
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M10 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l-2.12-2.12a4 4 0 00-5.656-5.656l-2.12 2.12a6 6 0 008.536 8.536l2.12-2.12zM9.172 9.172a2 2 0 114-4 2 2 0 01-4 0zm6.364 1.636l2.12-2.12a1 1 0 011.414 0l.707.707a1 1 0 010 1.414l-2.12 2.12M17 11a1 1 0 100-2h-2a1 1 0 100 2h2zm2.657-7.657a1 1 0 00-1.414 0l-2.12 2.12a6 6 0 108.536 8.536l2.12-2.12a1 1 0 000-1.414l-.707-.707z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <span class="hidden dark:block">
+              <!-- Moon icon -->
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="py-6 px-4 max-w-6xl mx-auto">
+        <!-- SNPMB Section -->
+        <div class="mt-0 mb-3">
+          <div
+            class="text-xs font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wide py-1.5 px-0 border-b border-gray-200 dark:border-gray-700"
+          >
+            Seleksi nasional — berlaku semua PTN
+          </div>
+        </div>
+
+        <table class="w-full border-collapse text-sm mb-6">
+          <thead>
+            <tr>
+              <th
+                class="text-xs font-medium text-gray-600 dark:text-gray-400 text-left px-2.5 py-1.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+              >
+                Jalur
+              </th>
+              <th
+                class="text-xs font-medium text-gray-600 dark:text-gray-400 text-left px-2.5 py-1.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+              >
+                Kegiatan
+              </th>
+              <th
+                class="text-xs font-medium text-gray-600 dark:text-gray-400 text-left px-2.5 py-1.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+              >
+                Jadwal 2026
+              </th>
+              <th
+                class="text-xs font-medium text-gray-600 dark:text-gray-400 text-left px-2.5 py-1.5 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
+              >
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="hover:bg-gray-50 dark:hover:bg-gray-800 border-b border-gray-200 dark:border-gray-700"
+            >
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                <strong>SNBP</strong>
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                Pengumuman hasil
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                31 Maret 2026
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700"
+              >
+                <span
+                  class="inline-block text-xs px-1.75 py-0.5 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full font-medium"
+                  >Selesai</span
+                >
+              </td>
+            </tr>
+            <tr
+              class="hover:bg-gray-50 dark:hover:bg-gray-800 border-b border-gray-200 dark:border-gray-700"
+            >
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                <strong>SNBT</strong>
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                Pendaftaran UTBK
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                25 Mar – 7 Apr 2026
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700"
+              >
+                <span
+                  class="inline-block text-xs px-1.75 py-0.5 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full font-medium"
+                  >Selesai</span
+                >
+              </td>
+            </tr>
+            <tr
+              class="hover:bg-gray-50 dark:hover:bg-gray-800 border-b border-gray-200 dark:border-gray-700"
+            >
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                <strong>SNBT</strong>
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                Unduh kartu peserta
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                11 – 15 April 2026
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700"
+              >
+                <span
+                  class="inline-block text-xs px-1.75 py-0.5 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full font-medium"
+                  >Aktif</span
+                >
+              </td>
+            </tr>
+            <tr
+              class="hover:bg-gray-50 dark:hover:bg-gray-800 border-b border-gray-200 dark:border-gray-700"
+            >
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                <strong>SNBT</strong>
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                Pelaksanaan UTBK
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                21 – 30 April 2026
+                <em class="text-xs text-gray-500 dark:text-gray-400"
+                  >(1 gelombang)</em
+                >
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700"
+              >
+                <span
+                  class="inline-block text-xs px-1.75 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full font-medium"
+                  >Akan datang</span
+                >
+              </td>
+            </tr>
+            <tr
+              class="hover:bg-gray-50 dark:hover:bg-gray-800 border-b border-gray-200 dark:border-gray-700"
+            >
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                <strong>SNBT</strong>
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                Pengumuman hasil SNBT
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              >
+                25 Mei 2026
+              </td>
+              <td
+                class="px-2.5 py-1.75 border border-gray-200 dark:border-gray-700"
+              >
+                <span
+                  class="inline-block text-xs px-1.75 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full font-medium"
+                  >Akan datang</span
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- PTN Section -->
+        <div class="mt-8 mb-3">
+          <div
+            class="text-xs font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wide py-1.5 px-0 border-b border-gray-200 dark:border-gray-700"
+          >
+            PTN — jadwal mandiri per kampus
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 mb-2"
+        >
+          <!-- UGM Card -->
+          <div
+            class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3.5"
+          >
+            <div class="flex gap-2.5 mb-2.5">
+              <div>
+                <span
+                  class="inline-block text-xs font-medium px-2 py-0.75 bg-blue-100 text-blue-800 rounded-full"
+                  >PTN</span
+                >
+                <div
+                  class="text-sm font-medium text-gray-900 dark:text-gray-100 mt-1"
+                >
+                  Universitas Gadjah Mada
+                </div>
+                <div class="text-xs text-gray-600 dark:text-gray-400">
+                  Yogyakarta
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >IUP Intake 1</span
+              >
+              <span
+                class="text-xs font-medium text-green-700 dark:text-green-400 text-right"
+                >20 Jan – 19 Feb 2026 ✓</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >IUP Intake 2</span
+              >
+              <span
+                class="text-xs font-medium text-amber-700 dark:text-amber-400 text-right"
+                >16 Apr – 3 Jun 2026 *</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >IUP Intake 3</span
+              >
+              <span
+                class="text-xs font-medium text-amber-700 dark:text-amber-400 text-right"
+                >Belum diumumkan *</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >PBU</span
+              >
+              <span
+                class="text-xs font-medium text-blue-700 dark:text-blue-400 text-right"
+                >14 – 29 Apr 2026</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >UM UGM CBT</span
+              >
+              <span
+                class="text-xs font-medium text-blue-700 dark:text-blue-400 text-right"
+                >14 Apr – 5 Mei 2026</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >Tes UM UGM CBT</span
+              >
+              <span class="text-xs font-medium text-amber-600 text-right"
+                >2 – 6 Jun 2026</span
+              >
+            </div>
+            <div class="flex justify-between items-baseline py-1.25 px-0 gap-2">
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >Pengumuman UM UGM</span
+              >
+              <span class="text-xs font-medium text-amber-600 text-right"
+                >12 Jun 2026</span
+              >
+            </div>
+            <a
+              href="https://admissions.ugm.ac.id"
+              class="text-xs text-gray-600 dark:text-gray-400 no-underline mt-1.5 block hover:text-gray-900 dark:hover:text-gray-200"
+              >admissions.ugm.ac.id ↗</a
+            >
+            <div class="text-xs text-gray-500 dark:text-gray-400 italic mt-1">
+              * Intake 2 & 3 bersifat tentatif, pantau laman resmi
+            </div>
+          </div>
+
+          <!-- Universitas Brawijaya Card -->
+          <div
+            class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3.5"
+          >
+            <div class="flex gap-2.5 mb-2.5">
+              <div>
+                <span
+                  class="inline-block text-xs font-medium px-2 py-0.75 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full"
+                  >PTN</span
+                >
+                <div
+                  class="text-sm font-medium text-gray-900 dark:text-gray-100 mt-1"
+                >
+                  Universitas Brawijaya
+                </div>
+                <div class="text-xs text-gray-600 dark:text-gray-400">
+                  Malang
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >SMUB Jalur Prestasi</span
+              >
+              <span class="text-xs font-medium text-blue-700 text-right"
+                >7 – 28 Mei 2026</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >SMUB Jalur Rapor</span
+              >
+              <span class="text-xs font-medium text-amber-700 text-right"
+                >Diprediksi Jun 2026</span
+              >
+            </div>
+            <div class="flex justify-between items-baseline py-1.25 px-0 gap-2">
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >SMUB Jalur Nilai UTBK</span
+              >
+              <span class="text-xs font-medium text-amber-700 text-right"
+                >Setelah pengumuman SNBT</span
+              >
+            </div>
+            <a
+              href="https://selma.ub.ac.id"
+              class="text-xs text-gray-600 dark:text-gray-400 no-underline mt-1.5 block hover:text-gray-900 dark:hover:text-gray-200"
+              >selma.ub.ac.id ↗</a
+            >
+          </div>
+
+          <!-- PENS Card -->
+          <div
+            class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3.5"
+          >
+            <div class="flex gap-2.5 mb-2.5">
+              <div>
+                <span
+                  class="inline-block text-xs font-medium px-2 py-0.75 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full"
+                  >PTN Vokasi</span
+                >
+                <div
+                  class="text-sm font-medium text-gray-900 dark:text-gray-100 mt-1"
+                >
+                  PENS
+                </div>
+                <div class="text-xs text-gray-600 dark:text-gray-400">
+                  Politeknik Elektronika Negeri Surabaya
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >SIMANDIRI Gel. 1 (UTBK)</span
+              >
+              <span class="text-xs font-medium text-amber-700 text-right"
+                >Diprediksi Mei 2026</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >SIMANDIRI Gel. 2 & 3 (CBT)</span
+              >
+              <span class="text-xs font-medium text-amber-700 text-right"
+                >Jun – Jul 2026</span
+              >
+            </div>
+            <div class="flex justify-between items-baseline py-1.25 px-0 gap-2">
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >Jalur PJJ</span
+              >
+              <span class="text-xs font-medium text-amber-700 text-right"
+                >Intensif Mei – Jun 2026</span
+              >
+            </div>
+            <a
+              href="https://pmb.pens.ac.id"
+              class="text-xs text-gray-600 dark:text-gray-400 no-underline mt-1.5 block hover:text-gray-900 dark:hover:text-gray-200"
+              >pmb.pens.ac.id ↗</a
+            >
+            <div class="text-xs text-gray-500 dark:text-gray-400 italic mt-1">
+              * Jadwal SIMANDIRI bersifat prediksi
+            </div>
+          </div>
+
+          <!-- ITS Card -->
+          <div
+            class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3.5"
+          >
+            <div class="flex gap-2.5 mb-2.5">
+              <div>
+                <span
+                  class="inline-block text-xs font-medium px-2 py-0.75 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full"
+                  >PTN</span
+                >
+                <div
+                  class="text-sm font-medium text-gray-900 dark:text-gray-100 mt-1"
+                >
+                  Institut Teknologi Sepuluh Nopember
+                </div>
+                <div class="text-xs text-gray-600 dark:text-gray-400">
+                  Surabaya
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >IUP Batch 1</span
+              >
+              <span class="text-xs font-medium text-green-700 text-right"
+                >13 Jan – 25 Feb 2026 ✓</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >IUP Batch 2</span
+              >
+              <span class="text-xs font-medium text-amber-700 text-right"
+                >Belum dikonfirmasi resmi *</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >SMITS Prestasi (FLAT)</span
+              >
+              <span class="text-xs font-medium text-amber-700 text-right"
+                >Diprediksi Mei 2026</span
+              >
+            </div>
+            <div class="flex justify-between items-baseline py-1.25 px-0 gap-2">
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >SMITS Umum & Kemitraan</span
+              >
+              <span class="text-xs font-medium text-amber-700 text-right"
+                >Diprediksi Jun 2026</span
+              >
+            </div>
+            <a
+              href="https://admission.its.ac.id"
+              class="text-xs text-gray-600 dark:text-gray-400 no-underline mt-1.5 block hover:text-gray-900 dark:hover:text-gray-200"
+              >admission.its.ac.id ↗</a
+            >
+            <div class="text-xs text-gray-500 dark:text-gray-400 italic mt-1">
+              * Pantau laman resmi untuk IUP Batch 2
+            </div>
+          </div>
+        </div>
+
+        <!-- PTS Section -->
+        <div class="mt-8 mb-3">
+          <div
+            class="text-xs font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wide py-1.5 px-0 border-b border-gray-200 dark:border-gray-700"
+          >
+            PTS — jadwal seleksi mandiri
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 mb-6">
+          <!-- BINUS Card -->
+          <div
+            class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3.5"
+          >
+            <div class="flex gap-2.5 mb-2.5">
+              <div>
+                <span
+                  class="inline-block text-xs font-medium px-2 py-0.75 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full"
+                  >PTS</span
+                >
+                <div
+                  class="text-sm font-medium text-gray-900 dark:text-gray-100 mt-1"
+                >
+                  BINUS University
+                </div>
+                <div class="text-xs text-gray-600 dark:text-gray-400">
+                  Jakarta · Bandung · Semarang · Malang · Medan
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >Batch 6 (TPKS)</span
+              >
+              <span class="text-xs font-medium text-blue-700 text-right"
+                >Daftar: 28 Mar – 10 Apr → Tes 11 Apr</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >Batch 6B (TPKS)</span
+              >
+              <span class="text-xs font-medium text-blue-700 text-right"
+                >Daftar: 11 – 17 Apr → Tes 18 Apr</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >Batch 6C (TPKS)</span
+              >
+              <span class="text-xs font-medium text-amber-600 text-right"
+                >Daftar: 18 – 24 Apr → Tes 25 Apr</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >Batch berikutnya</span
+              >
+              <span class="text-xs font-medium text-amber-700 text-right"
+                >Berlanjut hingga Agustus 2026</span
+              >
+            </div>
+            <div class="flex justify-between items-baseline py-1.25 px-0 gap-2">
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >Batas registrasi</span
+              >
+              <span class="text-xs font-medium text-amber-700 text-right"
+                >31 Agustus 2026</span
+              >
+            </div>
+            <a
+              href="https://binus.edu/admissions/higher-education/"
+              class="text-xs text-gray-600 dark:text-gray-400 no-underline mt-1.5 block hover:text-gray-900 dark:hover:text-gray-200"
+              >binus.edu/admissions ↗</a
+            >
+            <div class="text-xs text-gray-500 dark:text-gray-400 italic mt-1">
+              Biaya formulir Rp 300.000 · TPKS = Tes Potensi Kemampuan Siswa
+            </div>
+          </div>
+
+          <!-- Telkom University Card -->
+          <div
+            class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3.5"
+          >
+            <div class="flex gap-2.5 mb-2.5">
+              <div>
+                <span
+                  class="inline-block text-xs font-medium px-2 py-0.75 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full"
+                  >PTS</span
+                >
+                <div
+                  class="text-sm font-medium text-gray-900 dark:text-gray-100 mt-1"
+                >
+                  Telkom University
+                </div>
+                <div class="text-xs text-gray-600 dark:text-gray-400">
+                  Bandung · Jakarta · Surabaya · Purwokerto
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >JPA 1 (rapor, tanpa tes)</span
+              >
+              <span class="text-xs font-medium text-green-700 text-right"
+                >Okt – Des 2025 ✓</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >JPA 2 (rapor, tanpa tes)</span
+              >
+              <span class="text-xs font-medium text-blue-700 text-right"
+                >24 Jan – 10 Apr 2026</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >UTG 1 (ujian online)</span
+              >
+              <span class="text-xs font-medium text-blue-700 text-right"
+                >Sedang dibuka</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >Jalur Nilai UTBK</span
+              >
+              <span class="text-xs font-medium text-amber-600 text-right"
+                >Dibuka setelah pengumuman SNBT</span
+              >
+            </div>
+            <div
+              class="flex justify-between items-baseline py-1.25 px-0 border-b border-gray-200 dark:border-gray-700 gap-2"
+            >
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >Daily Onsite Test</span
+              >
+              <span class="text-xs font-medium text-blue-700 text-right"
+                >Dibuka (cek jadwal harian)</span
+              >
+            </div>
+            <div class="flex justify-between items-baseline py-1.25 px-0 gap-2">
+              <span
+                class="text-xs text-gray-600 dark:text-gray-400 flex-shrink-0"
+                >IUP (kelas internasional)</span
+              >
+              <span class="text-xs font-medium text-blue-700 text-right"
+                >Sedang dibuka</span
+              >
+            </div>
+            <a
+              href="https://smb.telkomuniversity.ac.id"
+              class="text-xs text-gray-600 dark:text-gray-400 no-underline mt-1.5 block hover:text-gray-900 dark:hover:text-gray-200"
+              >smb.telkomuniversity.ac.id ↗</a
+            >
+            <div class="text-xs text-gray-500 dark:text-gray-400 italic mt-1">
+              Biaya PIN Rp 400.000 (JPA) · Beasiswa s.d. 100% untuk nilai
+              terbaik
+            </div>
+          </div>
+        </div>
+
+        <!-- Strategy Section -->
+        <div class="mt-8 mb-3">
+          <div
+            class="text-xs font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wide py-1.5 px-0 border-b border-gray-200 dark:border-gray-700"
+          >
+            Strategi pendaftaran April – Juli 2026
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-md p-3">
+            <div
+              class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-1.5"
+            >
+              April
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Unduh kartu UTBK (11–15 Apr)
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Ikuti UTBK (21–30 Apr)
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Daftar PBU UGM (s.d. 29 Apr)
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Daftar UM UGM CBT (s.d. 5 Mei)
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Pantau Batch BINUS lanjutan
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Selesaikan JPA 2 Tel-U (s.d. 10 Apr)
+            </div>
+          </div>
+
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-md p-3">
+            <div
+              class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-1.5"
+            >
+              Mei
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Pengumuman SNBT (25 Mei)
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Daftar SMUB Prestasi UB (7–28 Mei)
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Pantau SMANDIRI PENS Gel. 1
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Daftar SMITS ITS Prestasi
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Tes UM UGM CBT (2–6 Jun)
+            </div>
+          </div>
+
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-md p-3">
+            <div
+              class="text-sm font-medium text-gray-900 dark:text-gray-100 mb-1.5"
+            >
+              Juni – Juli
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Jalur Nilai UTBK: UB, ITS, Tel-U
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              SIMANDIRI PENS Gel. 2 & 3
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              Pengumuman UM UGM (12 Jun)
+            </div>
+            <div
+              class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400 dark:before:text-gray-500"
+            >
+              SMUB Rapor UB (diprediksi Jun)
+            </div>
+            <div
+              class="text-xs text-gray-600 leading-relaxed pl-2.5 relative before:content-['·'] before:absolute before:left-0 before:text-gray-400"
+            >
+              Batch BINUS lanjutan terbuka
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
